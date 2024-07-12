@@ -6,10 +6,337 @@
     <title>Document</title>
 </head>
 <body>
+<style>
+/* .main{
+    width: 100%;
+    border: 1px solid black;
+    height: 500px;
+    background-repeat: no-repeat; 
+    background-size: 70%;
+    background-position: center; 
+} 
+.main img{
+    width: 100%;
+}
+
+#child{
+    border: 1px solid black;
+    text-align: center;
+    width: 30%;
+    margin: auto;
+    
+}
+h1{
+    text-align: center;
+    font-size: xx-large;
+    color: rgb(210, 79, 28);
+    margin-top: 20px;
+    
+}
+h3{
+    text-align: center;
+    color: rgb(30, 129, 210);
+    font-size: xx-large;
+}
+h3 input {
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+    border-color: rgb(138, 204, 63);
+    background-color: darkgrey;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    background-color: #333; 
+    color: #fff; 
+    padding: 10px 20px; 
+    display: flex; 
+    justify-content: space-evenly; 
+    align-items: center; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+
+#logo img {
+    max-height: 40px; 
+}
+
+
+nav ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 80px; 
+}
+
+
+nav ul li {
+    margin-right: 15px; 
+}
+
+
+nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold; 
+    padding: 8px 12px; 
+    border-radius: 4px;
+    transition: background-color 0.3s ease; 
+}
+
+
+nav ul li a:hover {
+    background-color: #555; 
+} */
+
+
+</style>
+<style>
+    /* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav #logo img {
+    height: 50px;
+    width: 50px;
+    margin-left: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin-right: 100px;
+}
+#h{
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+#span{
+    display: none;
+}
+
+/* Main section styles */
+.main {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#child {
+    text-align: center;
+}
+
+#child h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#balance {
+    font-weight: bold;
+    color: green;
+}
+
+#btn {
+    margin-top: 20px;
+}
+
+
+#deposit:hover {
+    background-color: rgba(0, 128, 0, 0.588);
+}
+#amount {
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+}
+#deposit{
+    background-color: green;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+#withdraw{
+    background-color: red;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+}
+#withdraw:hover {
+    background-color: rgba(255, 0, 0, 0.514);
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+        padding: 10px;
+    }
+
+    #menu-toggle {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    #home{
+    display: none;
+}
+
+    #span{
+        display: block;
+        margin-right: 150px;
+        font-weight: bolder;
+        font-size: xx-large;
+        
+    }
+    .main {
+        padding: 10px;
+    }
+
+    .main h1 {
+        font-size: 2rem;
+    }
+
+    #btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #btn button {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .main {
+        max-width: 100%;
+    }
+    #home{
+    display: none;
+}
+
+    #span{
+        display: block;
+        margin-right: 80px;
+        font-weight: bolder;
+        font-size: xx-large;
+        
+    }
+}
+
+
+</style>
+<nav>
+    <div id="logo">
+        <img src="https://t4.ftcdn.net/jpg/00/61/06/27/360_F_61062796_NF87GPnWV0fQ2LhoYNlyjev0PocRwZj9.jpg" alt="">
+    </div>
+   
+    <div id="h">
+        <div id="home">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="branches">Branches</a></li>
+    </ul>
+</div>
+   <div id="span"> <span>&#9776;</span> </div>
+</div>
+
+</nav>
     <div class="main">
-        <h1>Sitaram ka Bank</h1>
+        <img src="https://sbnri.com/blog/wp-content/uploads/2023/12/Frame-1000003945.png" alt="">
+        <h1>SBI DESH KA  BANK</h1>
         <div id="child">
-            <h3>Avliable Balance:-  <span id="balance">0</span></h3>
+            <h3>Available Balance:-  <span id="balance">0</span></h3>
             <h3>Enter Amount: <input type="text" id="amount"></h3>
             <div id="btn">
                 <button id="deposit">Deposit</button>
